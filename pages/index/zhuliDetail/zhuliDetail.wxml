@@ -1,0 +1,29 @@
+<view class="randomRed"><text>1.0000</text>元话费</view>
+<view class='zhuliRed_img'>
+    <image src='/pages/images/1.png'></image>
+</view>
+<view class='times' wx:if='{{timeLook}}'>{{lastTime}}</view>
+<view class='helpNum'>
+    <view class='helpCont'>
+        <view class='friendHelps'>
+            <image src='/pages/images/friendHelp.png' class='friendHelpBg'></image>
+            <text>好友助力</text>
+        </view>
+        
+        <view class='helpContTit'>规定时间内邀请3名新用户才能领取礼包</view>
+        <view class='helpUser'>
+            <view  wx:for="{{listImage}}" wx:key="this" wx:for-item="items">
+                <image src='{{items.headImage}}'></image>
+            </view>
+        </view>
+        <view class='helpTips'>{{state}}</view>
+    </view>
+    <!-- <view class='helpBtn'>立即邀请</view> -->
+    <block wx:if = "{{ haveInHand}}">
+        <button  open-type='share' style='border:none'  class='helpBtn'>立即邀请</button>
+    </block>
+    <block wx:else>
+        <button   style='border:none'  class='helpBtn {{btnDisabled}}'  bindtap='clickReceive'>{{state}}</button>
+    </block>
+</view>
+<image src='/pages/images/BGimg.png' class='bgImg'></image>

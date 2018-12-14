@@ -1,0 +1,62 @@
+<view class="titleUser">
+    <image src='/pages/images/userCoreTile.png' class='userTitleBg'></image>
+    <block wx:if = "{{hasUserInfo}}">
+        <view class="box">  
+            <view class="headImageBox">
+                <image class='userinfo-headImage' src="{{userInfo.userInfo.avatarUrl}}" ></image>
+            </view>
+            <view class="boxInfo">
+                <text class="userinfo-nickname" >{{userInfo.userInfo.nickName}}</text>
+            </view>
+        </view>
+        <view class='zuanMoney'>
+            <view class='phoneCharges'><text>{{huafei}}</text>元话费</view>
+            <button class='extractBtn' bindtap='clickList'>提取记录</button>
+        </view>
+    </block>
+    <block wx:else>
+        <image src='/pages/images/userPhoto.png' class='userinfo-headImage' style="margin-left:52rpx;margin-top:20rpx;"></image>
+        <button open-type='getUserInfo' class='userinfo-unLogin' bindgetuserinfo="onGotUserInfo" >快速登录</button>
+
+    </block>
+</view>
+<view class='listCont'>
+    <view class='list'>
+      <text class='listTitle'>充值金额</text>
+      <view class='listNum'>
+        <view wx:for="{{arr}}" wx:key = "item" data-index="{{index}}" data-num="{{item}}" bindtap="numbered" class='{{index==indexs ? "active":""}}'>{{item}}元</view>
+      
+      </view>
+    </view>
+    <view class='list'>
+      <text class='listTitle'>手机号码</text>
+      <view class='listNum'>
+        <input class='{{font}}' placeholder="仅限中国大陆手机号码" type='number' maxlength = '11' bindinput='touchStar' bindblur='no_focus' bindfocus = 'focus'></input>
+      </view>
+    </view> 
+    <view class='tiBtn {{btnDisabled}}' bindtap='tiqu'>点击提取话费</view> 
+    <view class='phoneTitle'>{{phonetitle}}</view>
+</view>
+<view class='mask'  wx:if='{{mask}}'>
+    <block wx:if='{{success}}'>
+        <view class= "sucress" >
+            <image src='/pages/images/success.png'></image>
+            <view class='closes' catchtap='clickClose'>
+                <image src='/pages/images/close.png' catchtap='clickClose'></image>
+            </view>
+            <view class='successText'>恭喜提取话费成功</view>
+            <button class='btnClick' open-type='share'>快去告诉好友吧</button>
+        </view>
+    </block>   
+    <block wx:else>
+        <view class= "sucress fails" >
+            <image src='/pages/images/fail.png' class='fails'></image>
+            <view class='closes' catchtap='clickClose'>
+                <image src='/pages/images/close.png' catchtap='clickClose'></image>
+            </view>
+            <view class='successText'>{{content}}</view>
+        </view>
+    </block>  
+</view>
+
+

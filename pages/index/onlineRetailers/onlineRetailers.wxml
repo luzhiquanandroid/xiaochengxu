@@ -1,0 +1,31 @@
+
+<view class="boxCont" wx:for='{{navUrl}}' wx:key='item'>
+    <view class='commodityImg'>
+        <image src='{{item.goodsImg}}' class='detailsImg' mode="widthFix"></image>
+    </view>
+    <canvasdrawer painting="{{painting}}" class="canvasdrawer" bind:getImage="eventGetImage"/>
+    <view class='business'>
+        <view class='businessName'>
+            <text class='l'>赞助商</text>
+            <text class='r'>{{item.wxAcount}}</text>
+        </view>
+        <view class='selfDescription'>
+            <view class='texts'>{{item.goodsName}}</view>
+            <view class='texts'>{{item.goodsDes}}</view>
+            
+            <view class='btns'>
+                <view class='l'>
+                    <image src='/pages/images/wxlogo.png'></image>
+                    <text class='wxName'>{{item.wxAcount}}</text>
+                </view>
+                <view class='r addBtn' bindtap='clickBtn'>立即添加</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='mask' wx:if='{{mask}}' bindtap='clicknoBtn'  wx:for='{{navUrl}}' wx:key='item'>
+    <view class='myCode'>
+        <image src='{{item.sellerCode}}'></image>
+    </view>
+    <view class='addAlbum'  catchtap="drawerDiary">保存到相册</view>
+</view>

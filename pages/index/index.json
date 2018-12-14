@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "赚好运",
+    "navigationBarBackgroundColor": "#AD08E1",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+
+}

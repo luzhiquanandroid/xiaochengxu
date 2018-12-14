@@ -1,0 +1,19 @@
+<view class='box'>
+<block wx:if = "{{hasList}}">
+    <view class='list'  wx:for="{{listImage}}" wx:key="this"  data-id="{{item.id}}" bindtap="clickDetails">
+        <view>
+            <image src='/pages/images/box_list.png'></image>
+        </view>
+        <text>宝箱</text>
+        
+    </view>
+</block>
+<block wx:else>
+    <view class='noList'>
+        <image src='/pages/images/listBao.png'></image>
+        <view class='nobox'>您还没有宝箱!</view>
+        <view class='clickBtn' bindtap="goPageIndex">去抽奖</view>
+        
+    </view>
+</block>    
+</view>

@@ -1,0 +1,120 @@
+page{
+    background:#FF5151;
+}
+.randomRed{
+    position: relative;
+    z-index: 9;
+    width:100%;
+    text-align:center;
+    color:#F7E046;
+    font-size:32rpx;
+    margin-top:70rpx;
+}
+.randomRed text{
+    font-size:60rpx;
+    margin-right:10rpx;
+}
+.zhuliRed_img{
+    position: relative;
+    z-index: 9;
+    text-align:center;
+    margin-top:67rpx;
+    margin-bottom: 80rpx;
+}
+.zhuliRed_img image{
+    width:242rpx;
+    height:218rpx;
+}
+.times{
+    font-size:36rpx;
+    color:#fff;
+    text-align:center;
+    position: relative;
+    z-index: 9;
+    margin-bottom:70rpx;
+}
+.helpNum{
+    position: relative;
+    z-index: 9;
+}
+.friendHelps{
+    position:relative;
+    top:-31rpx;
+    text-align:center;
+    
+}
+.friendHelpBg{
+    width:334rpx;
+    height:62rpx;
+    position:absolute;
+    left:50%;
+    margin-left:-167rpx;
+}
+.friendHelps text{
+    position:relative;
+    z-index: 9;
+    font-size:30rpx;
+    text-align: center;
+    color:#FE3333;
+}
+.helpCont{
+    width:500rpx;
+    height:251rpx;
+    background:#FDE09C;
+    border-radius: 20rpx;
+    border:3px solid #F6CE45;
+    margin:0 auto;
+}
+.helpContTit{
+    font-size:24rpx;
+    text-align:center;
+    color:#333;
+    margin-top:15rpx;
+}
+.helpUser{
+    overflow: hidden;
+    width:300rpx;
+    height:58rpx;
+    margin:0 auto;
+    margin-top:29rpx;
+}
+.helpUser view,.helpUser view image{
+    display: inline-block;
+    width:58rpx;
+    height:58rpx;
+    margin-right:60rpx;
+    border-radius:50%;
+    overflow: hidden;
+}
+.helpUser view:nth-child(3){
+    margin-right:0;
+}
+.helpTips{
+    color:#2E6EFF;
+    font-size:24rpx;
+    text-align:center;
+    margin-top:19rpx;
+
+}
+.helpBtn{
+    width:500rpx;
+    height:80rpx;
+    background:#FFD93F;
+    border-radius:50rpx;
+    font-size:36rpx;
+    color:#FE3333;
+    font-weight: bold;
+    text-align:center;
+    line-height:80rpx;
+    margin:40rpx auto 0
+}
+.helpBtn.disabled{
+    pointer-events:none;
+    background:#f3f3f3;
+}
+.bgImg{
+    width:100%;
+    position: absolute;
+    top:245rpx;
+    height: 500rpx;
+}

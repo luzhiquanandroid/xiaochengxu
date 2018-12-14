@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "获取钻石列表",
+    "navigationBarBackgroundColor": "#FF5151",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+
+}

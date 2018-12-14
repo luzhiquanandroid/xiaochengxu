@@ -1,0 +1,143 @@
+<image src='../images/indexBg.png' class='bgImg'></image>
+<!-- <swiper class="newsCont"  vertical="true" autoplay="true" circular="true" interval="2000">
+    <block wx:for="{{listImage}}" wx:key="">
+        <swiper-item class="overflowHid">
+            <view >
+                {{item.nickname}} 提取了{{item.amount}}  元话费
+            </view>
+        </swiper-item>
+    </block>  
+</swiper> -->
+<view class='myInformation'>
+    <view class='pictureBox' bindtap='personalCenter'>
+        <image src='{{userInfo.userInfo.avatarUrl}}' class='myPicture'></image>
+    </view>
+    <view class='myName'>{{userInfo.userInfo.nickName}}</view>
+    <view class='billDiamond'>
+        <view class='telephoneBill'>
+            <view>
+                <image src='/pages/images/telephoneBill.png' class='telephoneImg'></image>
+            </view>
+            <view class='telephoneBillNum'>{{huafei}}</view>
+        </view>
+        <view class='diamond'>
+            <view>
+                <image src='/pages/images/diamond.png' class='diamondImg'></image>
+            </view>
+            <view class='diamondNum'>{{zuan}}</view>
+        </view>
+    </view>
+    <view class='extractBtn' bindtap='extract'>
+        <image src='/pages/images/extractBtn.png' class='extractImg'></image>
+    </view>
+</view>
+<view class='buttonJump'>
+    <view class='myBoxlist' bindtap='treasureChest'>
+        <image src='/pages/images/6.png'></image>
+    </view>
+    <view class='myBill' bindtap='clickBill'>
+        <image src='/pages/images/7.png'></image>
+    </view>
+</view>
+<view class="wrapper">
+    <!-- <view class='luckyCont'>
+        <view class='zuan'>
+            <text class="zuanNum">{{zuan}}</text>钻
+        </view>
+        <view class='money' catchtap = 'clickUser'>
+            <view class='hasMoney' catchtap = 'clickUser'>{{huafei}}元</view>  
+            <view class="chargeTips">满1元可提取</view>
+        </view>
+	</view> -->
+    <view class='main'>  
+        <view class='turntable'>
+            <image src='../images/luckBg.png' class='turntableBg'></image>
+            <view class="canvas-container">
+                <view animation="{{animationData}}" class="canvas-content" >
+                    <view class="canvas-line">
+                        <view class="canvas-litem" wx:for="{{awardsList}}" wx:key="unique" style="-webkit-transform: rotate({{item.lineTurn}});transform: rotate({{item.lineTurn}})"></view>
+                     </view>
+                     <view class="canvas-list">
+                        <view class="canvas-item" wx:for="{{awardsList}}" wx:key="unique">
+                            <view class="canvas-item-text" style="-webkit-transform: rotate({{item.turn}});transform: rotate({{item.turn}})">{{item.award}}</view>
+                         </view>
+                    </view>   
+                 </view>
+            </view>
+        </view>
+        <button class="turntableBt getInfoBtn" wx:if="{{codeData}}" open-type='getUserInfo' style="border:none" bindgetuserinfo='onGotUserInfo' plain="true"></button>
+        <view  wx:if="{{codeData}}" class='turntableBt ' open-type='getUserInfo' style="border:none" bindgetuserinfo='onGotUserInfo'>
+            <image src='../images/buttons.png' class='turntableBtBg' mode="widthFix"></image>
+           
+        </view>
+        <view wx:else bindtap="getLottery" class='turntableBt {{btnDisabled}}'>
+            <image src='../images/buttons.png' class='turntableBtBg' mode="widthFix"></image>
+            
+        </view>
+    </view>
+</view>
+    <view class='invitation'>
+        <view class='invitationTitle'>每组队一名好友获得钻石+10</view>
+        <image src='/pages/images/invitationBg.png' class='invitationBg'></image>
+        <block wx:if='{{canShare}}'>
+        
+        <scroll-view  scroll-x style="width: 100%" class='scroll_view'>
+            <button  open-type='share' style='border:none'  class='scroll_list' data-button='1234' plain="true" wx:for="{{arrPeople}}"  wx:key = "item">
+                <image src='{{item.headImage}}'></image>
+            </button>
+        </scroll-view>
+        </block>
+        <block wx:else>
+        <scroll-view  scroll-x style="width: 100%" class='scroll_view'>
+            <button   style='border:none'  class='scroll_list' data-button='1234' plain="true" wx:for="{{arrPeople}}"  wx:key = "item">
+                <image src='{{item.headImage}}'></image>
+            </button>
+        </scroll-view>
+        </block>
+    </view>
+
+
+
+
+
+
+<view class='diamondCollar' wx:if='{{diamondCollar}}' bindtap='diamondCollarHide'>
+    <view class='get_diamond'>
+        <view class='get_finish'>恭喜你获得钻石*12</view>
+        <button  open-type='share' style='border:none' class='yaoqing' data-button='1235'>邀请好友获取钻石</button>
+    </view>
+</view>
+<view class='diamondCollar' wx:if='{{get_diamond}}' bindtap='diamondCollarHide'>
+    <view class='get_diamond'>
+        <view class='dontGet'>当前时间不能领取</view>
+        <view class='timeGet'>请在{{Surplus}}后领取</view>
+        <button  open-type='share' style='border:none' class='yaoqing dontGets'>邀请好友获取钻石</button>
+    </view>
+</view>
+
+
+<view class="mask" wx:if="{{mask}}" bindtap='clickMask'>
+    <view class='{{bgClass}}'>
+    <navigator wx:for="{{navUrl}}" wx:key="this" catchtap = 'clickJump' wx:if='{{quanmin}}' hover-class='none' class='gameList-image'
+target="miniProgram"
+open-type="navigate"
+app-id="wx9a407f947500a9c3" 
+path="pages/index/index?appid={{item.appId}}&path={{item.gameLink}}&transportImg={{item.transportImg}}">
+<image src="{{item.gameImg}}" class='topImg'></image>
+     <image src="{{bgImg}}" class='bottomImg'></image>
+        <button style="border:none" catchtap = 'clickMaskImg' plain="true"></button>
+        <view wx:if="{{btnBao}}" class='clickBtn'></view>
+</navigator>
+<block wx:if="{{!quanmin}}">
+        <image src="{{bgImg}}" ></image>
+        <button style="border:none" catchtap = 'clickJump' plain="true"></button>
+        <block wx:if="{{btnBao}}">
+            <view  class='clickBtn' catchtap = 'clickJump'></view>
+        </block>
+        <block wx:else>
+            <view  class='clickBtn' catchtap = 'clickJump'>开启“神秘宝箱”</view>
+        </block>       
+</block>
+      
+    </view>
+</view>

@@ -1,0 +1,34 @@
+{
+    "pages": [
+     
+        "pages/newIndex/newIndex",
+        "pages/index/index",
+        "pages/index/baoxiangDetail/baoxiangDetail",
+        "pages/index/xiangYaoqing/xiangYaoqing",
+        "pages/index/userCore/huafei/huafei",
+        "pages/index/baibaoxiang/baibaoxiang",
+        "pages/index/userCore/huafeiList/huafeiList",
+        "pages/index/userCore/zuanshi_list/zuanshi_list",
+        "pages/index/zhuliRed/zhuliRed",
+        "pages/index/randomRed/randomRed",
+        "pages/index/userCore/aboutUs/aboutUs",
+        "pages/index/userCore/CommProblem/CommProblem",
+        "pages/index/zhuliDetail/zhuliDetail",
+        "pages/index/userCore/boxList/boxList",
+        "pages/index/userCore/userCore",
+        "pages/index/userCore/redEnvelopes_list/redEnvelopes_list",
+        "pages/index/getDiamonds/getDiamonds",
+        "pages/index/onlineRetailers/onlineRetailers",
+        "pages/index/redYaoqing/redYaoqing"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTextStyle": "black",
+        "onReachBottomDistance": 50
+    },
+    "navigateToMiniProgramAppIdList": [
+    "wx9a407f947500a9c3"
+    
+  ]
+}

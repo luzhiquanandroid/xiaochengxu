@@ -1,0 +1,48 @@
+page{
+    background:#f3f3f3;
+}
+
+
+.list{
+    width:33.1%;
+    height: 200rpx;
+    text-align:center;
+    background:#fff;
+    font-size: 30rpx;
+    color:#333;
+    border-right: 1px solid #D8D8D8;
+    border-bottom: 1px solid #D8D8D8;
+    display: inline-block;
+}
+.list image{
+    width:60rpx;
+    height:69rpx;
+    margin: 47rpx 0 5rpx 0;
+}
+.list:nth-child(3n+3){
+    border-right: none;
+}
+.noList{
+    text-align:center;
+}
+.noList image{
+    width:260rpx;
+    height:230rpx;
+    margin:210rpx 0 20rpx 0
+}
+.nobox{
+    color:#848484;
+    font-size:24rpx;
+}
+.clickBtn{
+    width:150rpx;
+    height:55rpx;
+    line-height:55rpx;
+    border:1px solid #FF5151;
+    text-align:center;
+    border-radius:40rpx;
+    margin:0 auto;
+    font-size:30rpx;
+    color:#FF5252;
+    margin-top:20rpx;
+}

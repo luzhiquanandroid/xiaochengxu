@@ -1,0 +1,21 @@
+<view class='title'>常见问题</view>
+<view class='list'>
+    <view>问：赚好运是什么小程序？</view>
+    <view>答：赚好运是一款抽奖小程序，抽到的话费可对您的手机进行充值</view>
+</view>
+<view class='list'>
+    <view>问：小程序会收取费用吗？</view>
+    <view>答：赚好运是一款免费小程序，目前赚好运不会收取您的任何手续费</view>
+</view>
+<view class='list'>
+    <view>问：如何为手机充值？</view>
+    <view>答：在【个人中心】界面点击【提取话费】按钮即可提取话费，最低提取1元，共有1元、5元、10元这3个档位的话费可提取</view>
+</view>
+<view class='list'>
+    <view>问：提取后多久到账?</view>
+    <view>答：申请后提取一般会在1-3个工作日内到账，如果暂时未到账，还请您不要着急，耐心等待</view>
+</view>
+<view class='list'>
+    <view>问：如何联系客服？</view>
+    <view>答：在【个人中心】界面内，点击客服即可开启与客服之间的对话，欢迎您随时联系客服</view>
+</view>

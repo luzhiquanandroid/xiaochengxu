@@ -1,0 +1,19 @@
+<block wx:if = "{{hasList}}">
+    <view class="list" wx:for="{{listImage}}" wx:key="this" wx:for-item="items">
+    <text class='numHuafei'>{{items.amount}}元话费</text>
+    <view class='content'>
+        <text class='phoneNumber'>充值号码：{{items.phone}}</text>
+        <text class='TimeNum'>{{items.createTime}}</text>
+    </view>
+    </view>
+</block>
+<block wx:else>
+    <view class='noList'>
+        <image src='/pages/images/list_zuan.png'></image>
+        <view class='clickBtn' bindtap='goPageIndex'>去抽奖</view>
+        
+    </view>
+</block> 
+
+
+

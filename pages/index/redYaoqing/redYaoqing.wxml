@@ -1,0 +1,12 @@
+<button class='clickUs' open-type='getUserInfo' style="border:none" bindgetuserinfo='onGotUserInfo' plain="true">
+<view class='zhuliRed_img' >
+    <image src='/pages/images/fenxiaoRed.png' ></image>
+    <view class='redNum names'></view>
+    <view class='redNum'><text class='names'>{{name}}\n</text><text class='nume'>1.0000</text>元话费</view>
+</view>
+</button>
+<button  wx:if = "{{hasClick}}"  style='border:none'  class='helpBtn' bindtap='clickBack'>{{texts}}  {{black}}</button>
+<button wx:else style='border:none'  class='helpBtn'>点击上方图片，帮助好友拆红包</button>
+
+<view class='helpChai'>{{name}}抽到一个助力红包需要邀请3位新用户帮忙助力才能领取</view>
+<image src='/pages/images/BGimg.png' class='bgImg'></image>

@@ -1,0 +1,29 @@
+<view class="randomRed"><text>抽到一个宝箱</text></view>
+<view class='baibaoxiang_img'>
+    <image src='/pages/images/baoxiang.png'></image>
+</view>
+  <!-- 截图 -->
+  <canvasdrawer painting="{{painting}}" class="canvasdrawer" bind:getImage="eventGetImage"/>
+
+<view class='times'>{{lastTime}}</view>
+<view class='helpNum'>
+    <view class='helpCont'>
+        <view class='friendHelps'>
+            <image src='/pages/images/friendHelp.png' class='friendHelpBg'></image>
+            <text>好友助力</text>
+        </view>
+        
+        <view class='helpContTit'>规定时间内邀请6名新用户才能开启宝箱</view>
+        <view class='goodTips'>(有一定几率开出666元的话费)</view>
+        <view class='helpUser'>
+            <view>
+                <image ></image>
+            </view>
+            
+        </view>
+        <view class='helpTips'>邀请好友助力</view>
+    </view>
+    <!-- <view class='helpBtn'>求好友帮忙打开</view> -->
+     <button  open-type='share' style='border:none'  class='helpBtn'>立即邀请</button>
+    <view class='helpBtn' bindtap='drawerDiary'>保存到相册</view>
+</view>

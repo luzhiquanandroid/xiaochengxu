@@ -1,0 +1,18 @@
+<view class='contents'>
+<view class='redNum'><text>抽到一个宝箱</text></view>
+<view class="txt">(有一定几率帮助{{name}}开出666元话费充值)</view>
+<button class='clickUs' open-type='getUserInfo' style="border:none" bindgetuserinfo='onGotUserInfo' plain="true">
+<view class='zhuliRed_img' >
+    <image src='/pages/images/baoxiang.png' ></image>    
+</view>
+</button>
+
+<button wx:if='{{hasClick}}'  style='border:none'  class='helpBtn' bindtap='clickBack'>{{texts}} {{black}}</button>
+<button wx:else   style='border:none'  class='helpBtn' >点击上方宝箱，帮助好友打开</button>
+<view class='helpChai'>
+     <view>{{name}} 抽到一个宝箱</view>
+     <view>需要邀请6位新用户帮忙助力才能领取</view>
+</view>
+
+</view>
+<image src='/pages/images/BGimg.png' class='bgImg'></image>

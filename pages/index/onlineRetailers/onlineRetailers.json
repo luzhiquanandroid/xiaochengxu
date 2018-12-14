@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "商品详情",
+    "navigationBarBackgroundColor": "#FF5559",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "canvasdrawer": "../components/canvasdrawer/canvasdrawer"
+    }
+}

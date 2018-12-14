@@ -1,0 +1,91 @@
+<view class="titleUser">
+    <image src='../../images/userCoreTile.png' class='userTitleBg'></image>
+    <block wx:if = "{{hasUserInfo}}">
+        <view class="box">  
+            <view class="headImageBox">
+                <image class='userinfo-headImage' src="{{userInfo.userInfo.avatarUrl}}" ></image>
+            </view>
+            <view class="boxInfo">
+                <text class="userinfo-nickname" >{{userInfo.userInfo.nickName}}</text>
+            </view>
+        </view>
+        <view class='zuanMoney'>
+            <view class='phoneCharges'><text>{{huafei}}</text>元话费</view>
+            <view class='zuanQuota'><text>{{zuan}}</text>钻</view>
+            <!-- <button class='extractBtn' bindtap='huafei'>提取话费</button> -->
+        </view>
+    </block>
+    <block wx:else>
+        <image src='../../images/userPhoto.png' class='userinfo-headImage' style="margin-left:52rpx;margin-top:20rpx;"></image>
+        <button open-type='getUserInfo' class='userinfo-unLogin' bindgetuserinfo="onGotUserInfo" >快速登录</button>
+
+    </block>
+</view>
+<view class='listCont'>
+    <!-- <view class='list'wx:if="{{hasUserInfo}}"  bindtap='baoxiang'>
+        <image class='listLogo' src='/pages/images/smallLogo1.png'></image>
+        <text class='listTile'>宝箱</text>
+        <text class='listTips'>邀请好友开启宝箱会有额外惊喜</text>
+        <image class='jiantou' src='/pages/images/jiantou.png'></image>
+    </view>
+    <button class="list" wx:else  open-type='getUserInfo' style="border:none;text-align:left;padding:0;" bindgetuserinfo='onGotUserInfo'  plain="true">
+        <view class='list' open-type='getUserInfo' style="border:none" bindgetuserinfo='onGotUserInfo'>
+            <image class='listLogo' src='/pages/images/smallLogo1.png'></image>
+            <text class='listTile'>宝箱</text>
+            <text class='listTips'>邀请好友开启宝箱会有额外惊喜</text>
+            <image class='jiantou' src='/pages/images/jiantou.png'></image>
+        </view>
+    </button> -->
+    
+    <!-- <view class='list' bindtap='zhuli' wx:if="{{hasUserInfo}}">
+        <image class='listLogo listLogoWidth' src='/pages/images/smallLogo3.png'></image>
+        <text class='listTile'>助力话费</text>
+        <text class='listTips'></text>
+        <image class='jiantou' src='/pages/images/jiantou.png'></image>
+    </view>
+    <button class="list" wx:else  open-type='getUserInfo' style="border:none;text-align:left;padding:0;" bindgetuserinfo='onGotUserInfo'  plain="true">
+        <view class='list' open-type='getUserInfo' style="border:none" bindgetuserinfo='onGotUserInfo'>
+             <image class='listLogo listLogoWidth' src='/pages/images/smallLogo3.png'></image>
+        <text class='listTile'>助力话费</text>
+        <text class='listTips'></text>
+        <image class='jiantou' src='/pages/images/jiantou.png'></image>
+        </view>
+    </button> -->
+    
+
+    <view class='list' bindtap='zuanshi' wx:if="{{hasUserInfo}}">
+        <image class='listLogo listLogoWidth' src='/pages/images/smallLogo6.png'></image>
+        <text class='listTile'>获取钻石记录</text>
+        <text class='listTips'></text>
+        <image class='jiantou' src='/pages/images/jiantou.png'></image>
+    </view>
+    <button class="list" wx:else  open-type='getUserInfo' style="border:none;text-align:left;padding:0;" bindgetuserinfo='onGotUserInfo'  plain="true">
+        <view class='list' open-type='getUserInfo' style="border:none" bindgetuserinfo='onGotUserInfo'>
+             <image class='listLogo listLogoWidth' src='/pages/images/smallLogo6.png'></image>
+        <text class='listTile'>获取钻石记录</text>
+        <text class='listTips'></text>
+        <image class='jiantou' src='/pages/images/jiantou.png'></image>
+        </view>
+    </button>
+    <view class='list' bindtap='commpoblem'>
+        <image class='listLogo listLogoWidth'  src='/pages/images/smallLogo2.png'></image>
+        <text class='listTile'>常见问题</text>
+        <text class='listTips'></text>
+        <image class='jiantou' src='/pages/images/jiantou.png'></image>
+    </view>
+    <view class='list'>
+    <button open-type="contact" bindcontact="handleContact" plain='true' style='border:0'>
+        <image class='listLogo kefu' src='/pages/images/smallLogo4.png'></image>
+        <text class='listTile'>客服</text>
+        <text class='listTips'></text>
+        <image class='jiantou' src='/pages/images/jiantou.png'></image>
+
+    </button>
+    </view>
+    <view class='list' bindtap='aboutUs'>
+        <image class='listLogo listLogoWidth' src='/pages/images/smallLogo5.png'></image>
+        <text class='listTile'>关于我们</text>
+        <text class='listTips'></text>
+        <image class='jiantou' src='/pages/images/jiantou.png'></image>
+    </view>
+</view>

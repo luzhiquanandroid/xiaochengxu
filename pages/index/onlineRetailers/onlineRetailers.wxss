@@ -1,0 +1,88 @@
+page{
+    background:#f3f3f3;
+}
+.detailsImg{
+    width:100%;
+}
+.businessName{
+    padding:0 20rpx;
+    height:80rpx;
+    background:#fff;
+    overflow: hidden
+}
+.businessName text{
+    font-size:26rpx;
+    color:#333;
+    line-height: 80rpx;
+}
+.r{
+    float:right
+}
+.l{
+    float:left
+}
+.selfDescription{
+    padding:30rpx 20rpx 100rpx;
+    background:#FEF7E4;
+}
+.texts{
+    font-size:24rpx;
+    color:#8E856F;
+    line-height: 35rpx;
+    margin-bottom:20rpx;
+
+}
+.btns{
+    width:100%;
+    height:80rpx;
+    line-height: 80rpx;
+    overflow: hidden;
+}
+.btns image{
+    width:40rpx;
+    height:40rpx;
+}
+.wxName{
+    margin-left:10rpx;
+    font-size:30rpx;
+    color:#78705C
+}
+.addBtn{
+    width:150rpx;
+    height:60rpx;
+    background:red;
+    border-radius: 40rpx;
+    font-size:24rpx;
+    color:#fff;
+    text-align:center;
+    line-height:60rpx;
+    margin-top:10rpx;
+}
+.mask{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+     background:rgba(3, 3, 3,0.5);
+}
+.myCode image{
+    width:520rpx;
+    height:520rpx;
+    margin:0 auto;
+    display: block;
+    margin-top:35%;
+
+}
+.addAlbum{
+    width:520rpx;
+    height:80rpx;
+    background:#FFD93F;
+    margin:0 auto;
+    text-align:center;
+    border-radius: 50rpx;
+    color:FE3333;
+    font-size:30rpx;
+    line-height: 80rpx;
+    margin-top:30rpx;
+}

@@ -1,0 +1,23 @@
+<wxs src="./filter.wxs" module="util" />
+<view class='zuanTitle'>
+    <image src='/pages/images/zuanshi.png'></image>
+    钻石记录中不会记录按时间恢复的钻石
+</view>
+<block  wx:if="{{hasListFlg}}" >
+    <view class="list" wx:for="{{hasList}}" wx:key="">
+        <view class='listLeft'>
+            <text class='source'>{{util.filter(item.action)}}</text>
+            <text class='sourceTime'>{{item.createTime}}</text>
+        </view>
+        <view class='listRight'>+{{item.amount}}</view>
+    </view>
+</block>
+<block wx:else>
+    <view class='noList'>
+        <image src='/pages/images/list_zuan.png'></image>
+        <view class='clickBtn' bindtap='goPageIndex'>去抽奖</view>
+    </view>
+</block> 
+
+ 
+

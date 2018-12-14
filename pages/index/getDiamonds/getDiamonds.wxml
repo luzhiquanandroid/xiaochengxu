@@ -1,0 +1,109 @@
+<view class='bigBox' style=''>
+    <view>
+        <image src='/pages/images/getDomaidsBg.png' class='titleBg'></image>
+        <block wx:if='{{diamondMission}}'>
+            <image src='/pages/images/diamondMission.png' class='diamondMission'></image>
+            <text class='mission-text'>完成任务获得钻石，钻石可在赚好运中进行消耗</text>
+        </block>
+        <block wx:if='{{finishMission}}'>
+            <image src='/pages/images/finishMission.png' class='diamondMission'></image>
+            <image src='/pages/images/getMission.png' class='getMission'></image>
+        </block>
+    </view>
+    <view class='checkInaccess' wx:if='{{everyBox}}'>
+        <view class='content'>
+            <view class='title'>每日任务</view>
+            <view   wx:for="{{everyArr}}"  wx:key = "item" class='list list{{item.taskType}}' >
+                <view class='signIn_Box'>
+                    <image src='{{item.imgUrl}}' class='signIn_img'></image>
+                </view>
+                <view class='signIn_content'>
+                    <view class='signIn_left'>
+                        <view class='nameCont' >{{item.title}}</view>
+                        <view>
+                            <image src='/pages/images/diamond.png' class='diamondImg'></image>
+                            <text class='diamondText'>+{{item.awardValue}}钻石奖励</text>
+                        </view>
+                    </view>
+                    <view class='signIn_right'>
+                        <view class='right_btn' bindtap="clickMask" data-taskType="{{item.taskType}}">{{item.desc}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='checkInaccess gameCont' wx:if='{{gameBox}}'>
+        <view class='content'>
+            <view class='title'>试玩小程序 <text>(需玩20秒以上)</text></view>
+            <navigator class='signIn list' wx:for='{{gameArr}}' wx:key = "item" data-item="{{item}}" target="miniProgram" open-type="navigate" app-id="wx9a407f947500a9c3"  path="pages/index/index?appid={{item.appId}}&path={{item.gameLink}}&transportImg={{item.transportImg}}" hover-class='none' bindsuccess = 'leaveGame' >
+                <view class='signIn_Box'>
+                    <image src='{{item.imgUrl}}' class='signIn_img'></image>
+                </view>
+                <view class='signIn_content'>
+                    <view class='signIn_left'>
+                        <view class='nameCont'>{{item.title}}</view>
+                        <view>
+                            <text class='diamondText'>{{item.desc}}</text>
+                        </view>
+                    </view>
+                    <view class='signIn_right'>
+                        <view class='right_btn' data-item="{{item}}" >+{{item.awardValue}}</view>
+                    </view> 
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view class='noLists' wx:if="{{nolist}}">
+        <image src='/pages/images/nolist.png' class='nolistImg'></image>
+        <view class='nolistText'>任务已全部完成</view>
+    </view>
+</view>
+<!-- 签到弹窗 -->
+<view class='signIn_mask' wx:if='{{signIn_mask}}'>
+    <view class='signCont'>
+        <image src='/pages/images/singIn.png' class='signContBg'></image>
+        <image src='/pages/images/everyDay.png' class='everyDay'></image>
+        <view class='signDays'>已签到 <text>{{days}}</text>天</view>
+        <view class='signList'>
+            <view class='' wx:for="{{arr}}"  wx:key = "item" data-index="{{index}}"   class='list {{item.signIn}}'>
+                <block>
+                <view class='listDatys'>第{{item.days}}天</view>
+                <view class='listImg'>
+                    <image src='/pages/images/listDiamond.png' class='listDiamondImg'></image>
+                </view>
+                <view class='diamondsNum'>+{{item.diamond}}</view>
+                </block>
+                <block>
+                    <view class='listMask'>
+                        <image src='/pages/images/hasSing.png'></image>
+                    </view>
+                </block>
+            </view>
+        </view>
+        
+            <view class='signInLook'>提醒我明天继续签到</view>
+        
+        <view class='btnBox'>
+            <view class='dontRemind' bindtap='noneMask'>不提醒</view>
+            <form bindsubmit="formSubmit" bindreset="formReset" report-submit="rform">
+            <button data-type='siginTip' formType="submit" style='border:none;'  plain="true"  catchtap='yuyueMask' class='remindBox'>
+                <view class='remind'>预约签到提醒</view>
+            </button>
+            </form>
+        </view>
+    </view>
+</view>
+<!-- 添加小程序弹窗 -->
+<view class='addGame' wx:if='{{addGameMask}}' bindtap='noneMask'>
+    <view class='addGameImg'>
+        <image src='/pages/images/addGame.png' class='addImg'></image>
+    </view>
+    <view class='knowAdd' bindtap='noneMask'>知道了</view>
+</view>
+<!-- 关注公众号弹窗 -->
+<view class='addGame' wx:if='{{gongGameMask}}' bindtap='noneMask'>
+    <view class='addGameImg'>
+        <image src='/pages/images/gongzhong.gif' class='gongImg'></image>
+    </view>
+    <view class='knowAdd' bindtap='noneMask'>知道了</view>
+</view>

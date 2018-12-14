@@ -1,0 +1,37 @@
+function filter(num) {
+    var types = ""
+    switch (num) {
+        case 0:
+            types = "首登奖励 ";
+            break;
+        case 2:
+            types = "抽好运小程序钻石奖"
+            break;
+        case 4:
+            types = "首页邀请好友奖励"
+            break;
+        case 5:
+            types = "2小时奖励"
+            break;
+        case 6:
+            types = "幸运奖进入小程序得钻石"
+            break;
+        case 7:
+            types = "添加小程序 "
+            break;
+        case 8:
+            types = "公众号 "
+            break;
+        case 9:
+            types = "进入小程序 "
+            break;
+        case 10:
+            types = "签到"
+            break;
+
+    }
+    return types
+}
+module.exports = {
+    filter: filter
+}

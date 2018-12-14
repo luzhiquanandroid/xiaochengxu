@@ -1,0 +1,24 @@
+<view class="randomRed"><text>1.0000</text>元话费</view>
+<view class='zhuliRed_img'>
+    <image src='/pages/images/1.png'></image>
+</view>
+<view class='times'>{{lastTime}}</view>
+<view class='helpNum'>
+    <view class='helpCont'>
+        <view class='friendHelps'>
+            <image src='/pages/images/friendHelp.png' class='friendHelpBg'></image>
+            <text>好友助力</text>
+        </view>
+        
+        <view class='helpContTit'>规定时间内邀请3名新用户才能领取礼包</view>
+        <view class='helpUser'>
+            <view><image src=""></image></view>
+            <view></view>
+            <view></view>
+        </view>
+        <view class='helpTips'>邀请好友助力</view>
+    </view>
+    <!-- <view class='helpBtn'>立即邀请</view> -->
+    <button  open-type='share' style='border:none'  class='helpBtn'>立即邀请</button>
+</view>
+<image src='/pages/images/BGimg.png' class='bgImg'></image>

@@ -1,0 +1,76 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.1",
+	"appid": "wxf63dc64e22435089",
+	"projectname": "%E6%8C%96%E7%9F%BF",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "邀请测试",
+					"pathName": "pages/index/xiangYaoqing/xiangYaoqing",
+					"query": "scene=126",
+					"scene": "1007"
+				},
+				{
+					"id": -1,
+					"name": "邀请测试",
+					"pathName": "pages/index/xiangYaoqing/xiangYaoqing",
+					"query": "friend=2a88f4c3b2ec41fab895e84838aa6e52&refId=80",
+					"scene": "1007"
+				},
+				{
+					"id": 2,
+					"name": "详情",
+					"pathName": "pages/index/baoxiangDetail/baoxiangDetail",
+					"query": "friend=2a88f4c3b2ec41fab895e84838aa6e52&refId=80",
+					"scene": "1007"
+				},
+				{
+					"id": -1,
+					"name": "详情",
+					"pathName": "pages/index/baibaoxiang/baibaoxiang",
+					"query": "friend=2a88f4c3b2ec41fab895e84838aa6e52&refId=80",
+					"scene": "1007"
+				},
+				{
+					"id": -1,
+					"name": "获取钻石",
+					"pathName": "pages/index/getDiamonds/getDiamonds",
+					"query": "friend=2a88f4c3b2ec41fab895e84838aa6e52&refId=80",
+					"scene": "1007"
+				}
+			]
+		}
+	}
+}

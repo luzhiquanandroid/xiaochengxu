@@ -1,0 +1,156 @@
+page{
+    background:#FF5151;
+}
+.contents{
+    position: relative;
+    z-index: 999;
+}
+.randomRed{
+    position: relative;
+    z-index: 9;
+    width:100%;
+    text-align:center;
+    color:#F7E046;
+    font-size:32rpx;
+    margin-top:70rpx;
+}
+.randomRed text{
+    font-size:60rpx;
+    margin-right:10rpx;
+}
+.zhuliRed_img{
+    position: relative;
+    z-index: 9;
+    text-align:center;
+    margin-top:67rpx;
+    margin-bottom: 60rpx;
+}
+.zhuliRed_img image{
+    width:268rpx;
+    height:200rpx;
+}
+.redNum{
+    position:relative;
+    z-index: 9;
+    text-align:center; 
+    margin:0 auto;
+    color:#FCE854;
+    font-size:26rpx;
+    font-weight: bold;
+    margin-top:80rpx;
+
+}
+.redNum text{
+    font-size:46rpx;
+}
+.times{
+    font-size:36rpx;
+    color:#fff;
+    text-align:center;
+    position: relative;
+    z-index: 9;
+    margin-bottom:70rpx;
+}
+.helpNum{
+    position: relative;
+    z-index: 9;
+}
+.friendHelps{
+    position:relative;
+    top:-31rpx;
+    text-align:center;
+    
+}
+.friendHelpBg{
+    width:334rpx;
+    height:62rpx;
+    position:absolute;
+    left:50%;
+    margin-left:-167rpx;
+}
+.friendHelps text{
+    position:relative;
+    z-index: 9;
+    font-size:30rpx;
+    text-align: center;
+    color:#FE3333;
+}
+.helpCont{
+    width:500rpx;
+    height:251rpx;
+    background:#FDE09C;
+    border-radius: 20rpx;
+    border:3px solid #F6CE45;
+    margin:0 auto;
+}
+.helpContTit{
+    font-size:24rpx;
+    text-align:center;
+    color:#333;
+    margin-top:15rpx;
+}
+.helpUser{
+    overflow: hidden;
+    width:300rpx;
+    height:58rpx;
+    margin:0 auto;
+    margin-top:29rpx;
+}
+.helpUser view,.helpUser view image{
+    display: inline-block;
+    width:58rpx;
+    height:58rpx;
+    margin-right:60rpx;
+    border-radius:50%;
+    overflow: hidden;
+}
+.helpUser view:nth-child(3){
+    margin-right:0;
+}
+.helpTips{
+    color:#2E6EFF;
+    font-size:24rpx;
+    text-align:center;
+    margin-top:19rpx;
+
+}
+.helpBtn{
+    width:500rpx;
+    height:80rpx;
+    background:#FFD93F;
+    border-radius:50rpx;
+    font-size:32rpx;
+    color:#FE3333;
+    text-align:center;
+    line-height:80rpx;
+    margin:0 auto
+}
+.bgImg{
+    width:100%;
+    position: absolute;
+    top:245rpx;
+    height: 500rpx;
+}
+.helpChai{
+    text-align:center;
+    font-size:24rpx;
+    color:#fff;
+    width:100%;
+    margin:159rpx auto 0;
+    line-height: 40rpx;
+}
+.clickUs{
+    width:300rpx;
+    height:400rpx;
+    margin:0 auto;
+    margin-bottom:100rpx;
+}
+.txt{
+  font-size:24rpx;
+  width: 100%;
+  text-align: center;
+font-weight:500;
+color:rgba(255,255,255,1);
+line-height:1;
+padding-top:28rpx;
+}

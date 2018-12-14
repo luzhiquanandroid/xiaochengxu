@@ -1,0 +1,19 @@
+page{
+    background:#f3f3f3;
+    margin:30rpx   30rpx 0; 
+    width:auto;
+}
+view{
+    margin-bottom:10rpx;
+}
+.title{
+    font-size:30rpx;
+    margin-bottom:30rpx;
+    color:#333;
+    font-weight: bold;
+}
+.list{
+    font-size:26rpx;
+    margin-bottom:30rpx;
+    line-height:35rpx;
+}

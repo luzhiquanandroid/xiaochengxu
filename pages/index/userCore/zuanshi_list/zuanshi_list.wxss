@@ -1,0 +1,95 @@
+page{
+    background:#f3f3f3;
+}
+.list{
+  height:130rpx;
+  background:#fff;
+  overflow: hidden;
+  position:relative;
+  margin-top:10rpx;
+  display: flex;
+  padding:0 51rpx;
+}
+.numHuafei{
+  font-size:28rpx;
+  color:#333;
+  margin:20rpx 0 24rpx 51rpx;
+  display: block
+}
+.content{
+  overflow: hidden;
+  margin:0 51rpx;
+}
+.phoneNumber{
+  color:#848484;
+  font-size:20rpx;
+  float: left;
+}
+.TimeNum{
+  color:#848484;
+  font-size:20rpx;
+  float: right;
+}
+.noList{
+    text-align:center;
+}
+.noList image{
+    width:260rpx;
+    height:272rpx;
+    margin:210rpx 0 20rpx 0
+}
+.nobox{
+    color:#848484;
+    font-size:24rpx;
+}
+.clickBtn{
+    width:150rpx;
+    height:55rpx;
+    line-height:55rpx;
+    border:2px solid #FF5151;
+    text-align:center;
+    border-radius:40rpx;
+    margin:0 auto;
+    font-size:30rpx;
+    color:#FF5252;
+    margin-top:20rpx;
+}
+/* 钻石列表头部提示 */
+.zuanTitle{
+    width:100%;
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size:20rpx;
+    color:#333;
+    background:#fff;
+    margin-top:10rpx;
+}
+.zuanTitle image{
+    width:21rpx;
+    height:21rpx;
+    position: relative;
+    top:3rpx;
+    margin:0 11rpx 0 51rpx;
+}
+
+/* 获的钻石数列表 */
+.listLeft{
+    width:50%;
+    height:100%;
+}
+.source{
+    display: block;
+    font-size:28rpx;
+    color:#333;
+    margin:30rpx 0 0rpx;
+}
+.sourceTime{
+    font-size:20rpx;
+    color:#848484;
+}
+.listRight{
+    float: right;
+    width:50%;
+    text-align:right;
+    line-height: 130rpx;
+}

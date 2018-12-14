@@ -1,0 +1,120 @@
+<image src='/pages/images/indexBgs.png' class='indexBg'></image>
+<image src='/pages/images/bottomBg.png' class='bottomBg'></image>
+<view class='mainContent'>
+    <button wx:if="{{!hasLogin}}" open-type='getUserInfo'  bindgetuserinfo="onGotUserInfo" class='logins' plain='true' style='border:none'></button>
+        <view class='myInformation'>
+            <block wx:if="{{hasLogin}}">
+                <view class='pictureBox' bindtap='personalCenter'>
+                    <image src='{{avatarUrl}}' class='myPicture'></image>
+                </view>
+                <view class='myName'>{{nickName}}</view>
+            </block>
+            <block wx:else>
+                <view class='pictureBox'>
+                    <image src='/pages/images/userPhoto.png' class='myPicture'></image>
+                </view>
+                <view class='myName '>
+                    <button class='noLogin' open-type='getUserInfo'  bindgetuserinfo="onGotUserInfo">快速登陆</button>
+                </view>
+            </block>
+            <view class='billDiamond'>
+                <view class='telephoneBill'>
+                    <view>
+                        <image src='/pages/images/telephoneBill.png' class='telephoneImg'></image>
+                    </view>
+                    <view class='telephoneBillNum'>{{telephoneBill}}</view>
+                </view>
+                <view class='diamond'>
+                    <view>
+                        <image src='/pages/images/diamond.png' class='diamondImg'></image>
+                    </view>
+                    <view class='diamondNum'>{{diamonds}}</view>
+                </view>
+            </view>
+            <view class='extractBtn' bindtap='clickTelephoneBill'>
+                <image src='/pages/images/extractBtn.png' class='extractImg'></image>
+            </view>
+        </view>
+    
+    <view class='latestNews'>
+        <swiper class="newsCont"  vertical="true" autoplay="true" circular="true" interval="2000">
+            <block wx:for="{{receiveList}}" wx:key="receiveList">
+                <swiper-item class="overflowHid">
+                    <view>
+                        {{item.nickname}} 提取了{{item.amount}}  元话费
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class='ruleBtn' bindtap='clickruleMask'>规则</view>
+    </view>
+    <view class='clickCollar'>
+        <button class='click-collars' wx:if="{{!hasLogin}}" open-type='getUserInfo'  bindgetuserinfo="onGotUserInfo"  plain='true' style='border:none'></button>
+        <view class="bubble">
+            <view class="bubbleBox">
+                <image src='/pages/images/ball.png' class="ball"></image>
+                <view bindtap='bubble' wx:if="{{newList.length>0}}" wx:for="{{newList}}" wx:key="" data-index="{{index}}" data-userId="{{item.userId}}" data-id="{{item.id}}" style="left:{{item.lefts}}rpx;top:{{item.tops}}rpx" class="bubble1" >
+                <image src='/pages/images/ranmodz.png' class='bubbleImg'></image>
+                <text>+{{item.diamond}}</text>
+                </view>
+                <view  class="bubble2" wx:if="{{newList.length==0}}">
+                <image src='/pages/images/ranmodz.png' class='bubbleImg'></image>
+                <text>生产中..</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    
+    <view class='clickTab'>
+        <scroll-view  scroll-x = 'true' style="width: 100%" class='scroll_view'>
+            <view class='clickList'>
+                <button wx:if="{{!hasLogin}}" open-type='getUserInfo'  bindgetuserinfo="onGotUserInfo" class='scroll-button' plain='true' style='border:none'></button>
+                <view bindtap='clickToluck'>
+                    <view class='listTitle'>手机话费免费领</view>
+                    <view class='listImg'>
+                        <image src='/pages/images/3.png'></image>
+                    </view>
+                    <view class='listThemati'>转盘抢话费</view>
+                    <view class='jumpBtn' >立即去抢</view>
+                </view>
+            </view>
+            <view class='clickList'>
+            <button wx:if="{{!hasLogin}}" open-type='getUserInfo'  bindgetuserinfo="onGotUserInfo" class='scroll-button' plain='true' style='border:none'></button>
+                <view bindtap='clickEveryDatTaskTotal'>
+                    <image class='newImg' src='/pages/images/new.png' wx:if='{{trySmallGameTotal}}'></image>
+                    <view class='listTitle'>试玩小程序领钻石</view>
+                    <view class='listImg'>
+                        <image src='/pages/images/2.png'></image>
+                    </view>
+                    <view class='listThemati'>试玩小程序</view>
+                    <view class='jumpBtn' >立即去玩</view>
+                </view>
+            </view>
+            <view class='clickList'>
+            <button wx:if="{{!hasLogin}}" open-type='getUserInfo'  bindgetuserinfo="onGotUserInfo" class='scroll-button' plain='true' style='border:none'></button>
+                <view bindtap='trySmallGameList'>
+                    <image class='newImg' src='/pages/images/new.png' wx:if='{{everyDatTaskTotal}}'></image>
+                    <view class='listTitle'>大量得钻石在这儿</view>
+                    <view class='listImg'>
+                        <image src='/pages/images/4.png'></image>
+                    </view>
+                    <view class='listThemati'>天天挖钻石</view>
+                    <view class='jumpBtn' >获取钻石</view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
+<!-- 弹窗部分 -->
+<view class='ruleMask' wx:if='{{ruleMask}}'>
+    <image src='/pages/images/rule.png' class='ruleBg'></image>
+    <view class='ruleCont'>
+        <view class='ruleTitle'>钻石收集规则</view>
+        <view class='ruleList'>
+            <view>1、钻石30分钟生成1次，数量随机；</view>
+            <view>2、24小时不回来收集，钻石停止生成，需回来收集钻石后才能继续生成；</view>
+            <view>3、钻石在转盘内进行消耗，通过消耗钻石获取免费话费；</view>
+        </view>
+        <view class='rulemaskBtn' bindtap='clickruleMasknone'>我明白了</view>
+    </view>
+</view>

@@ -1,0 +1,21 @@
+<view class="randomRed"><text>{{mount}}</text>元话费</view>
+<view class='randomTips'>已存入账户</view>
+<view class='randomList' >
+    <view wx:for="{{listImage}}" wx:key="this" wx:for-item="items">
+        <image src='{{items.headImage}}'></image>
+    </view>
+</view>
+<view class='randomTipsed'>30000+人已领取</view>
+<view class="goGame" wx:key="this" wx:for="{{navUrl}}">
+<navigator hover-class='none' class='gameList-image'
+target="miniProgram"
+open-type="navigate"
+app-id="wx9a407f947500a9c3" 
+path="pages/index/index?appid={{item.appId}}&path={{item.gameLink}}&transportImg={{item.transportImg}}"
+>
+<image src="{{item.gameImg}}"></image>
+
+</navigator>
+</view>
+<button ></button>
+<image src='/pages/images/BGimg.png' class='bgImg'></image>

@@ -1,0 +1,83 @@
+page{
+    background:#FF5151;
+}
+.randomRed{
+    position: relative;
+    z-index: 9;
+    width:100%;
+    text-align:center;
+    color:#F7E046;
+    font-size:32rpx;
+    margin-top:70rpx;
+}
+.randomRed text{
+    font-size:60rpx;
+    margin-right:10rpx;
+}
+.randomTips{
+    color:#fff;
+    text-align:center;
+    width:100%;
+    font-size:24rpx;
+    margin-top:15rpx;
+    position: relative;
+    z-index: 9;
+}
+.randomList{
+    width:570rpx;
+    overflow:hidden;
+    margin:0 auto;
+    margin-top:100rpx;
+    position: relative;
+    z-index: 9;
+}
+.randomList view,.randomList view image{
+    width:58rpx;
+    height:58rpx;
+    border-radius: 50%;
+    margin-right:15rpx;
+    overflow:hidden;
+    display: inline-block
+
+}
+
+.randomList view:nth-child(8n+8){
+    margin-right:0;
+}
+.randomList view image{
+    width:58rpx;
+    height:58rpx;
+    border-radius: 50%;
+}
+.randomTipsed{
+    width:322rpx;
+    height:49rpx;
+    background:#CC4141;
+    border-radius: 30rpx;
+    margin:0 auto;
+    text-align:center;
+    color:#fff;
+    font-size:24rpx;
+    margin-top:26rpx;
+    line-height: 49rpx;
+    position: relative;
+    z-index: 9;
+}
+.bgImg{
+    width:100%;
+    position: absolute;
+    top:245rpx;
+    height: 500rpx;
+}
+.goGame{
+width:610rpx;
+height: 223rpx;
+margin: auto;
+margin-top:100rpx;
+}
+.goGame image{
+width:610rpx;
+height: 220rpx;
+position: relative;
+z-index: 99999;
+}

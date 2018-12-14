@@ -1,0 +1,353 @@
+/* 背景 */
+page{
+    background:linear-gradient(180deg,rgba(27,28,36,1),rgba(48,50,71,1));
+    height:100%;
+    overflow: hidden
+}
+.logins{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:80rpx;
+    z-index: 99
+}
+
+.noLogin{
+    width:148rpx;
+    height:40rpx;
+    border-radius: 40rpx;
+    border:none;
+    color:#567afe;
+    line-height: 40rpx;
+    text-align:center;
+    font-size: 24rpx;
+    font-weight: bold;
+    margin-top:20rpx;
+    margin-left:0;
+
+}
+.indexBg{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+
+}
+.bottomBg{
+    position: absolute;
+    bottom:0;
+    z-index: 2;
+    width:100%;
+    height:298rpx;
+}
+/* 主体内容 */
+.mainContent{
+    position: relative;
+    z-index: 9;
+    color:#FFF;
+    height:100%;
+}
+/* 头部头像 名字 提现等样式 */
+.myInformation{
+    display: flex
+}
+.pictureBox{
+    width:80rpx;
+    height:80rpx;
+    margin:0rpx 18rpx  0 28rpx;
+}
+.myPicture{
+    width:80rpx;
+    height:80rpx;
+    border-radius: 50%;
+   
+}
+.myName{
+    font-size:28rpx;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    line-height:80rpx;
+    width:220rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* 话费钻石样式 */
+.billDiamond{
+    margin-top:10rpx;
+}
+.telephoneBill,.diamond{
+    display:flex;
+    line-height: 40rpx;
+    height:40rpx;
+    align-items: center;
+
+}
+.telephoneImg,.diamondImg{
+    width:18rpx;
+    height:21rpx;
+    margin:0 17rpx 0 54rpx;
+}
+.telephoneBillNum{
+    font-size:24rpx;
+    color:#F5F063;
+    font-weight: bold;
+    line-height: 48rpx;
+    
+    
+}
+.diamondNum{
+    font-size:24rpx;
+    color:#16F6DC;
+    font-weight: bold;
+    line-height: 43rpx;
+}
+.extractImg{
+    width:130rpx;
+    height:50rpx;
+    margin:28rpx 24rpx 0 93rpx;
+}
+/* 最新消息样式 */
+.newsCont{
+    width:250rpx;
+    height:35rpx;
+    border-radius: 40rpx;
+    border:1rpx solid #622DB3;
+    background:rgba(98,45,179,0.1);
+    font-size:20rpx;
+    text-align:center;
+    margin-top:25rpx;
+    margin-left:24rpx;
+}
+.overflowHid view{
+    width:85% !important;
+    margin:0 auto !important;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    line-height: 35rpx;
+}
+.ruleBtn{
+    width:80rpx;
+    height:35rpx;
+    border:1rpx solid #CECCFF;
+    border-radius: 40rpx;
+    line-height:35rpx;
+    text-align:center;
+    font-size:20rpx;
+    color:#FFF;
+    margin:20rpx 0 0 24rpx;
+}
+/* 中间部分 */
+.clickCollar{
+    position: absolute;
+    top:50%;
+    margin-top:-320rpx;
+    height:600rpx;
+    width:100%;
+
+}
+/* 底部按钮 */
+.clickTab{
+position: absolute;
+bottom:80rpx;
+    padding-left:24rpx;
+    z-index:99;
+    width: 100%;
+    /* display: inline-block */
+}
+.bubble{
+    width:650rpx;
+    height: 467rpx;
+    position: absolute;
+    left: 50rpx;
+    z-index: 9;
+    top:-50rpx;
+}
+.bubble1{
+    width: 90rpx;
+    height: 90rpx;
+    padding:10rpx 10rpx;
+    background: transparent;
+
+    position: absolute;
+    font-size: 24rpx;
+    text-align: center;
+}
+.bubble2{
+    width: 90rpx;
+    height: 90rpx;
+    padding:10rpx 10rpx;
+    background: transparent;
+    top:0;
+    left: 0;
+    position: absolute;
+    font-size: 24rpx;
+    text-align: center;
+}
+.bubbleBox{
+position: relative;
+}
+@keyframes mybubble{
+0% {
+transform: scale(1);
+}
+
+50% {
+transform: scale(1.2);
+}
+
+100% {
+transform: scale(1);
+}
+}
+.bubbleImg{
+width: 75rpx;
+height: 75rpx;
+display: block;
+margin: auto;
+animation: 1.5s mybubble infinite linear;
+
+}
+.ball{
+    display: block;
+    margin: auto;
+    width: 568rpx;
+    height: 507rpx;
+    /* background: red; */
+}
+/* 列表样式 */
+.clickList{
+   width:280rpx;
+    height:330rpx;
+    background:linear-gradient(0deg,rgba(57,31,143,1),rgba(70,62,186,1));
+    box-shadow:0px 1rpx 25rpx 0px rgba(0, 0, 0, 0.2);
+    border-radius:30rpx;
+    display: inline-block;
+    margin-right:30rpx;
+    position: relative;
+}
+.newImg{
+    width:60rpx;
+    height:30rpx;
+    position: absolute;
+    top:0;
+    right:0;
+}
+.scroll_view{
+    white-space:nowrap;
+    box-sizing:border-box;
+
+}
+/* 控制左右滑动滚动条样式 */
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+.listTitle{
+    color:#A3CCFF;
+    font-size:22rpx;
+    text-align:center;
+    margin:25rpx 0 27rpx;
+}
+.listImg{
+    width:120rpx;
+    height:120rpx;
+    margin:0 auto;
+    background:#000;
+    border-radius:50%;
+    overflow: hidden;
+}
+.listImg image{
+     width:120rpx;
+    height:120rpx;
+}
+.listThemati{
+    text-align:center;
+    font-size:28rpx;
+    color:#FFF;
+    margin:15rpx 0;
+}
+.jumpBtn{
+    width:170rpx;
+    height:45rpx;
+    background:linear-gradient(90deg,rgba(52,132,214,1),rgba(63,77,214,1));
+    border-radius:23px;
+    text-align:center;
+    line-height: 45rpx;
+    margin:0 auto;
+    font-size:24rpx;
+}
+/* 规则弹窗 */
+.ruleMask{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background:rgba(13, 14, 18, 0.5);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+}
+.ruleBg{
+    width:550rpx;
+    height:530rpx;
+    display: block;
+    margin:0 auto;
+}
+.ruleCont{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    width:550rpx;
+    height:530rpx;
+    border-radius:28rpx;
+}
+.ruleTitle{
+    color:#FFF;
+    font-size:36rpx;
+    font-weight: bold;
+    text-align:center;
+    height:130rpx;
+    line-height: 130rpx;
+}
+.ruleList{
+    padding:39rpx 55rpx 63rpx;
+    font-size:20rpx;
+    color:#333;
+}
+.ruleList view{
+    line-height: 40rpx;
+}
+.rulemaskBtn{
+    width:430rpx;
+    height:70rpx;
+    background:linear-gradient(90deg,rgba(52,132,214,1),rgba(63,77,214,1));
+    border-radius:35rpx;
+    font-size:28rpx;
+    color:#FFF;
+    line-height:70rpx;
+    text-align:center;
+    margin:0 auto
+}
+/* 底部登陆按钮 */
+.scroll-button{
+    position: absolute;
+    top:0 ;
+    left:0;
+    width:280rpx;
+    height:330rpx;
+}
+.click-collars{
+    width:100%;
+    height:600rpx;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 99
+}
